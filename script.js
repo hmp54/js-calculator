@@ -8,21 +8,21 @@
 
     //set all stored values to empty string/undefined. 
      clear(){
-         this.currentOperand = ''; 
-         this.previousOperand =''; 
-         this.operation = undefined; 
+         this.currentOperand = '';
+         this.previousOperand = '';
+         this.operation = undefined;
      }
 
      delete(){}
 
      appendNumber(number){
-         this.currentOperand = number; 
+         this.currentOperand = number
      }
 
      chooseOperation(operation){}
      compute(){}
      updateDisplay(){
-         this.currentOperandTextElement.innertext = this.currentOperand; 
+         this.currentOperandTextElement.innertext = this.currentOperand 
      }
  }
 
@@ -41,7 +41,7 @@
  //Every time they're clicked on, the inner text of the button (AKA the button's respective number) populates to the top screen 
  numberButtons.forEach(button =>{
      button.addEventListener('click', () =>{
-         calculator.updateDisplay(button.innerText); 
+         calculator.appendNumber(button.innerText); 
          calculator.updateDisplay();
      });
  });
